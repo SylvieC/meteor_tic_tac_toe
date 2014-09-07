@@ -1,0 +1,59 @@
+<head>
+  <title>simple_tic_tac_toe2</title>
+</head>
+
+<body>
+
+   <div class="players">
+    {{>teams}}
+  </div>
+  <div class='mainBoard'>
+  {{>mainBoard}}
+</div>
+ 
+</body>
+
+
+
+<template name="teams" id='templateTeams'>
+  <div id='game'>
+      <ul id="teams">
+        {{#each players}}
+       <li class={{current}} id={{name}}>
+       <img src={{img_url}}>
+       <h2>Team<span>{{id}}</span><span class="team"></span></h2><h3 class="player">{{name}}
+     </h3></li>
+        {{/each}}
+      </ul>
+    </div>
+  </template>
+
+<template name="mainBoard">
+  <h1>Tic-Tac-Tow</h1>
+ 
+  <table id="firstBoard">
+    <tr>
+      <td id="main1"> </td>
+      <td id="main2"> </td>
+      <td id="main3"></td>
+    </tr>
+    <tr>
+       <td id="main4"></td>
+      <td id="main5"></td>
+      <td id="main6"></td>
+    </tr>
+    <tr>
+       <td id="main7"></td>
+      <td id="main8"></td>
+      <td id="main9"></td>
+    </tr>
+  </table>
+   <table id='newWin'>
+  <tr>
+    <td id="winnerBoard"></td>
+  </tr> 
+</table>
+  
+</template>
+
+
